@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: datasnipper-lite
+Version: 0.1.0
+Summary: Lightweight toolkit for DataSnipper-style document reconciliation workflows.
+Author: datasnipper-lite maintainers
+License: MIT License
+        
+        Copyright (c) 2025 nevaozcimen-cpu
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: datasnipper,document-matching,excel,pdf,reconciliation
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Text Processing :: General
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.0
+Requires-Dist: openpyxl>=3.1
+Requires-Dist: rapidfuzz>=3.0
+Provides-Extra: pdf
+Requires-Dist: pdfplumber>=0.11; extra == "pdf"
+Requires-Dist: camelot-py[cv]>=0.11; extra == "pdf"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1; extra == "dev"
+Requires-Dist: black>=24.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"
+Dynamic: license-file
+
+# datasnipper-lite
+
+Geliştiricilerin DataSnipper benzeri belge mutabakat akışlarını otomatikleştirebilmesi için hazırlanan hafif Python kütüphanesi. Excel ve PDF belgelerindeki tablolu verileri içe aktarır, metin parçalarını hücrelerle eşleştirir ve sonuçları raporlanabilir hale getirir.
+
+## Özellikler (MVP)
+- Excel `.xlsx` dosyalarından veri içe aktarma
+- Metin normalizasyonu ve benzerlik skorlaması
+- JSON formatında eşleştirme sonuçları
+
+## Yol Haritası
+- PDF tablo çıkarımı için destek
+- Embedding tabanlı gelişmiş eşleştirme
+- Web/massaüstü kullanıcı arayüzü
+
+## Kurulum
+```bash
+pip install .
+```
+
+Geliştirici ortamını kurmak için:
+```bash
+pip install .[dev]
+```
+
+## Katkı
+1. Depoyu forklayın / klonlayın.
+2. Özellik/fix branşında çalışın.
+3. Testleri (`pytest`) çalıştırın.
+4. Pull request gönderin.
