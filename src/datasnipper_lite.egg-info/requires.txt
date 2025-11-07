@@ -1,0 +1,14 @@
+pandas>=2.0
+openpyxl>=3.1
+rapidfuzz>=3.0
+
+[dev]
+pytest>=8.0
+pytest-cov>=4.1
+black>=24.0
+ruff>=0.6
+mypy>=1.10
+
+[pdf]
+pdfplumber>=0.11
+camelot-py[cv]>=0.11
